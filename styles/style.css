@@ -2,6 +2,7 @@
     background-color: #4a51b9;
 }
 
+
 /* Header */
 
 .header {
@@ -66,6 +67,11 @@
 
 .header__main {
     display: flex;
+    flex-direction: column;
+}
+
+.header__main-price {
+    display: flex;
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
@@ -118,6 +124,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding-block-end: 100px;
 }
 
 .main__cards-item {
@@ -130,6 +137,18 @@
     gap: 10px;
     background-color:  #e1ebed;
     padding: 10px;
+}
+
+.main__cards-item-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.main__cards-item-right {
+    display: flex;
+    align-items: center;
+    gap: 50px;
 }
 
 .cards__item-img {
@@ -227,4 +246,132 @@
 
 .main__page-circle-active {
     background-color: #75aef5;
+}
+
+@media (width >= 768px) {
+    .header {
+        padding: 20px 25px 40px;
+    }
+
+    .header__menu-img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .header__bell-img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .header__bell::before {
+        top: 3px;
+        left: 3px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .header__title {
+        font-size: 24px;
+    }
+
+    .header__number {
+        font-size: 52px;
+    }
+
+    .header__subnumber {
+        font-size: 18px;
+    }
+
+    .main__cards-item {
+        width: 718px;
+        padding: 10px 50px;
+        justify-content: space-between;
+    }
+
+    .cards__item-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .cards__item-number {
+        font-size: 40px;
+    }
+
+    .cards__item-subnumber {
+        font-size: 16px;
+    }
+
+    .cards__item-circles-circle {
+        width: 8px;
+        height: 8px;
+    }
+
+    .cards__item-position {
+        width: 80px;
+        height: 80px;
+    }
+
+    .cards__item-arrow {
+        width: 35px;
+        height: 35px;
+    }
+
+    .cards__item-options {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+@media (width >= 1024px) {
+    .header__main {
+        padding-inline: 130px;
+    }
+}
+
+@media (width >= 1280px) {
+    .header__title {
+        font-size: 32px;
+    }
+
+    .header__main {
+        padding-inline: 270px;
+    }
+
+    .main__cards-item {
+        width: 900px;
+    }
+}
+
+@media (width >= 1440px) {
+    .header__menu-img, .header__bell-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .header__bell::before {
+        top: 5px;
+        left: 5px;
+        width: 15px;
+        height: 15px;
+    }
+
+    .main__cards-item {
+        width: 1100px;
+    }
+
+    .main__cards {
+        gap: 25px;
+    }
+}
+
+@media (width >= 1600px) {
+    .header__main {
+        padding-inline: 360px;
+    }
+}
+
+@media (width >= 1800px) {
+    .header__main {
+        padding-inline: 400px;
+    }
 }
