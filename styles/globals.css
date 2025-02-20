@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--main-ff);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--default-color);
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+/* Ссылки */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #007bff;
+}
+
+button,
+input {
+    color: currentColor;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
