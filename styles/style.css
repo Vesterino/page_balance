@@ -368,8 +368,8 @@
 }
 
 @media (width >= 1280px) {
-    .container {
-        padding-inline: 65px;
+    .main__count {
+        padding-inline: 165px;
     }
 
     .main__title {
@@ -404,13 +404,19 @@
 }
 
 @media (width >= 1600px) {
-    .container {
-        padding-inline: 125px;
+    .main__count {
+        padding-inline: 225px;
     }
 }
 
 @media (width >= 1800px) {
-    .container {
-        padding-inline: 230px;
+    .main__count {
+        padding-inline: 330px;
+    }
+}
+
+@media (width >= 1920px) {
+    .main__count {
+        padding-inline: 390px;
     }
 }
