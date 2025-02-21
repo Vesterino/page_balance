@@ -2,15 +2,22 @@
     background-color: #4a51b9;
 }
 
+.container {
+    width: 1920px;
+    margin: 0 auto;
+    padding-inline: 25px;
+    overflow: hidden;
+}
+
 
 /* Header */
 
 .header {
-    padding: 20px 25px 25px;
+    padding: 20px 25px 0;
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    border-bottom: 5px solid #78b4e6;
+    outline: 1px solid #fff;
 }
 
 .header__head {
@@ -23,6 +30,7 @@
     width: 25px;
     height: 25px;
 }
+
 .header__bell {
     position: relative;
 }
@@ -45,44 +53,59 @@
     height: 25px;
 }
 
-.header__title {
+/* Main */
+
+.main {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-bottom: 5px solid #78b4e6;
+}
+
+.main__title {
+    padding-block-start: 15px;
     font-size: 16px;
     font-weight: 500;
     color: #828282;
     text-align: center;
+    opacity: 0.8;
 }
 
-.header__number {
-    padding-block-start: 20px;
+
+.main__count {
+    padding-block-end: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__number {
     font-size: 48px;
     font-weight: 700;
     color: #4a51b9;
     letter-spacing: 1px;
 }
 
-.header__subnumber {
+.main__subnumber {
     font-size: 16px;
     color: #828282;
+    opacity: 0.8;
 }
 
-.header__main {
-    display: flex;
-    flex-direction: column;
-}
-
-.header__main-price {
+.main__count-price {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
 }
 
-.header__main-left {
+.main__count-left {
     display: flex;
     flex-direction: column;
 }
 
-.header__button-swiper {
+.main__button-swiper {
     position: relative;
     min-width: 90px;
     height: 40px;
@@ -90,7 +113,7 @@
     border-radius: 30px;
 }
 
-.header__button-swiper::before {
+.main__button-swiper::before {
     position: absolute;
     content: '';
     top: 5px;
@@ -101,29 +124,20 @@
     background: #fff;
 }
 
-.header__statistics {
+.main__statistics {
+    display: block;
     text-align: right;
     font-size: 16px;
     color: #4a51b9;
     text-transform: lowercase;
 }
 
-/* Main */
-
-.main {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-inline: 25px;
-}
-
 .main__cards {
     position: absolute;
-    top: -20px;
+    top: 170px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     padding-block-end: 100px;
 }
 
@@ -248,9 +262,30 @@
     background-color: #75aef5;
 }
 
+@media (width <= 350px) {
+    .main__cards-item {
+        padding: 5px;
+        gap: 5px;
+        width: 320px;
+    }
+}
+
+@media (width <= 330px) {
+    .main__cards-item {
+        padding: 3px;
+        gap: 0;
+        width: 310px;
+    }
+
+    .cards__item-options {
+        top: 5px;
+        right: 5px;
+    }
+}
+
 @media (width >= 768px) {
     .header {
-        padding: 20px 25px 40px;
+        padding: 20px 25px 10px;
     }
 
     .header__menu-img {
@@ -270,16 +305,20 @@
         height: 10px;
     }
 
-    .header__title {
+    .main__title {
         font-size: 24px;
     }
 
-    .header__number {
+    .main__number {
         font-size: 52px;
     }
 
-    .header__subnumber {
+    .main__subnumber {
         font-size: 18px;
+    }
+
+    .main__cards {
+        top: 210px
     }
 
     .main__cards-item {
@@ -323,18 +362,18 @@
 }
 
 @media (width >= 1024px) {
-    .header__main {
+    .main__count {
         padding-inline: 130px;
     }
 }
 
 @media (width >= 1280px) {
-    .header__title {
-        font-size: 32px;
+    .container {
+        padding-inline: 65px;
     }
 
-    .header__main {
-        padding-inline: 270px;
+    .main__title {
+        font-size: 32px;
     }
 
     .main__cards-item {
@@ -365,13 +404,13 @@
 }
 
 @media (width >= 1600px) {
-    .header__main {
-        padding-inline: 360px;
+    .container {
+        padding-inline: 125px;
     }
 }
 
 @media (width >= 1800px) {
-    .header__main {
-        padding-inline: 400px;
+    .container {
+        padding-inline: 230px;
     }
 }
